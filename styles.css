@@ -5,3 +5,39 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.js .reveal{opacity:1;transform:none}}
 .footer-bottom>div{display:flex;gap:20px}.privacy-link{text-decoration:underline}.legal-page{padding:155px var(--pad) 80px;min-height:80vh}.legal-page h1{font-size:clamp(40px,7vw,80px);line-height:1.05;letter-spacing:-.05em;margin:0 0 40px;overflow-wrap:anywhere}.legal-page h2{font-size:25px;line-height:1.3;letter-spacing:-.6px;margin:36px 0 14px;max-width:800px}.legal-page p{max-width:800px;font-size:15px;line-height:1.85}.legal-page a{text-decoration:underline;overflow-wrap:anywhere}.legal-note{border-left:3px solid var(--orange);padding:15px 20px;background:#e4e7dd}
 .process-grid>*{min-width:0}.process-tabs{min-width:0}.process-tabs button{min-width:0}@media(max-width:380px){h1{font-size:13.4vw}.process-tabs{grid-template-columns:1fr}.contact-phone{font-size:23px}.hero-foot{font-size:7px}.blueprint-top{font-size:7px}.blueprint-values{gap:17px}.blueprint-values strong{font-size:29px}.planner-controls .button{gap:10px;font-size:11px}}
+
+.footer-contact a{display:inline-block;padding:4px 0;overflow-wrap:anywhere}.footer-contact a:hover{text-decoration:underline}.footer-top>*{min-width:0}@media(max-width:760px){.footer-contact{grid-column:1/-1}}
+
+/* Industrial motion edition: plain KA mark, no emoji icons. */
+.mark{padding-right:0;letter-spacing:-2px;clip-path:polygon(0 0,100% 0,100% 80%,83% 100%,0 100%)}
+.hero{background:radial-gradient(ellipse at 80% 35%,#ff632f19,transparent 55%),#111514}
+.hero-grid{background-size:64px 64px;mask-image:linear-gradient(90deg,transparent,#000);transform:skewY(-8deg);opacity:.8}
+.hero-copy h1{text-shadow:0 8px 35px #0004;animation:title-enter .9s cubic-bezier(.2,.8,.2,1) both}
+.hero-copy h1>span{color:transparent;-webkit-text-stroke:2px var(--orange)}
+.hero-art{isolation:isolate}.structure-wrap{overflow:hidden}
+.construction-halo{position:absolute;width:83%;aspect-ratio:1;border:1px solid #ff632f55;transform:rotate(-24deg);background:repeating-linear-gradient(90deg,transparent 0 49px,#ff632f09 49px 50px);animation:halo-turn 28s linear infinite;z-index:-1}
+.construction-halo:after{content:'';position:absolute;inset:14%;border:1px dashed #ff632f55;border-radius:50%}
+.scan-beam{position:absolute;inset:10% 7% auto;height:1px;background:var(--orange);box-shadow:0 0 24px 5px #ff632f33;animation:scan-build 7s ease-in-out infinite;pointer-events:none;z-index:2;opacity:.5}
+#hero-structure{animation:steel-float 10s ease-in-out infinite;transform-origin:center;will-change:transform}
+.ticker{border-top:1px solid #ffa282;border-bottom:8px solid #171a19;background:var(--orange);padding:22px 0;transform:rotate(-1deg) scale(1.02);position:relative;z-index:3}
+.ticker>div{word-spacing:.18em}.ticker>div:after{content:' / ';padding:0 30px}
+.statement{background:linear-gradient(125deg,#111514 45%,#29312b);border-left:7px solid var(--orange)}
+.statement:before{content:'';position:absolute;right:-10%;top:0;width:50%;height:100%;background:repeating-linear-gradient(125deg,transparent 0 80px,#ffffff05 81px 83px);pointer-events:none}
+.principles article{transition:transform .3s,border-color .3s}.principles article:hover{transform:translateY(-6px);border-color:var(--orange)}
+.service summary{transition:padding .3s,color .3s}.service summary:hover{color:#bd3910;padding-left:10px}
+.blueprint{box-shadow:inset 0 0 80px #0005}.button{position:relative;overflow:hidden}.button:after{content:'';position:absolute;inset:-100% auto -100% -40%;width:22%;background:#ffffff22;transform:rotate(25deg);transition:left .55s;pointer-events:none}.button:hover:after{left:125%}
+.contact{background:linear-gradient(120deg,#ff632f,#ff7944)}
+@keyframes title-enter{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+@keyframes halo-turn{to{transform:rotate(156deg)}}
+@keyframes scan-build{0%,100%{transform:translateY(0);opacity:.15}50%{transform:translateY(350px);opacity:.65}}
+@keyframes steel-float{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-16px) rotate(2deg)}}
+@media(max-width:760px){.hero-copy{padding-top:42px}.hero-art{height:440px;margin-top:16px;border-top:1px solid #ffffff15}#hero-structure{height:355px}.hero-copy h1>span{-webkit-text-stroke:1.4px var(--orange)}.construction-halo{width:75%}.statement{border-left-width:4px}.ticker{font-size:23px}.art-top{font-size:8px}.scan-beam{animation-duration:8s}}
+@media(prefers-reduced-motion:reduce){.hero-copy h1,#hero-structure,.construction-halo,.scan-beam{animation:none}.scan-beam{display:none}.principles article:hover,.service summary:hover{transform:none}}
+/* Scroll-linked construction and kinetic type */
+.structure-wrap{transform:rotateY(var(--lean-x,0deg)) rotateX(var(--lean-y,0deg));transition:transform .4s ease-out}.floor{transition:opacity .12s linear;transform-box:view-box}.statement h2{position:relative;transform:translateY(var(--depth,0px))}.statement .outline-word{bottom:0;font-size:18vw;color:transparent;-webkit-text-stroke:1px #ffffff24;will-change:transform}.kinetic-break{overflow:hidden;padding:55px 0;background:var(--orange);color:var(--ink);border-top:1px solid #171a19}.scroll-type{font-weight:950;font-size:clamp(55px,12vw,190px);letter-spacing:-.07em;line-height:.88;white-space:nowrap;width:max-content;will-change:transform}.scroll-type+.scroll-type{color:transparent;-webkit-text-stroke:1.5px var(--ink);margin:12px 0 0 -80px}.kinetic-caption{margin:30px 22px 0;font:10px monospace;letter-spacing:2px}.paused .scroll-type,.paused .statement h2{transform:none!important}.paused .scan-beam{opacity:0}.paused .structure-wrap{transform:none}.js .reveal{transform:translateY(45px) scale(.97);transition:opacity .8s,transform .8s cubic-bezier(.16,1,.3,1)}.js .reveal.visible{transform:none}.paused .reveal{transform:none}
+@media(max-width:760px){.kinetic-break{padding:38px 0}.scroll-type{font-size:20vw}.kinetic-caption{font-size:8px}.statement .outline-word{font-size:24vw}.structure-wrap{transition:none}}
+@media(prefers-reduced-motion:reduce){.scroll-type,.statement h2,.structure-wrap,.js .reveal{transform:none!important}.floor{transition:none}}
+
+body{overflow-x:clip}
+
+.ticker{transform:none}

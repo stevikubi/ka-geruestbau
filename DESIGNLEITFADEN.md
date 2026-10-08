@@ -21,7 +21,12 @@ Weißer Hintergrund, Graphittext, schmale orange Linie im Kopf. KA-Wortmarke lin
 Die Website verwendet eine neu gestaltete typografische KA-Wortmarke mit Aufwärtspfeil; dies ist kein übernommenes bestehendes Firmenlogo. Bei Lieferung des verbindlichen Logos ersetzen.
 
 ## Firmendaten im aktuellen Entwurf
-KA Gerüstbau GmbH i. G.; Geschäftsführer Steven Daniel Kubina; Rheinstr. 11, 14513 Teltow; Satzungssitz Berlin; +49 163 2710731; info@kageruestbau.de. Registerstatus und Handwerksrollenstatus vor Veröffentlichung aktualisieren. Petrit wird nicht als Meister bezeichnet.
+KA Gerüstbau GmbH; Geschäftsführer Steven Daniel Kubina; Rheinstr. 11, 14513 Teltow; Satzungssitz Berlin; +49 163 2710731; info@kageruestbau.de. Registerstatus und Handwerksrollenstatus vor Veröffentlichung aktualisieren. Petrit wird nicht als Meister bezeichnet.
 
 ## Bewegung
 Animierte Gerüstillustration, Scroll-Einblendungen, Laufschrift, bedienbare Gerüstskizze. Animationen pausierbar, reduzierte Bewegung respektieren. Mobile Bedienung ohne Hover-Abhängigkeit.
+
+## Aktualisierung 08.10.2026
+Keine Pfeil-Emojis oder dekorativen Pfeilzeichen. Reine KA-Wortmarke mit angeschnittener orangefarbener Fläche. Industrielle Raster, Konturschrift und Konstruktionslinien auf der Website; Verträge bleiben ruhige, gut lesbare Drucklayouts.
+
+Web-Bewegung: scrollabhängiger Gerüstaufbau, gegenläufige Großtypografie und dezente räumliche Bewegung. Bewegungsreduktion und Pause respektieren.

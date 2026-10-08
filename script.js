@@ -51,3 +51,22 @@ form.addEventListener('submit',e=>{e.preventDefault();if(!form.reportValidity())
 $('#copy-request').addEventListener('click',async()=>{if(!form.reportValidity())return;const text=requestText();try{await navigator.clipboard.writeText(text);$('#form-status').textContent='Anfragetext kopiert. Senden Sie ihn an info@kageruestbau.de.';}catch{const area=document.createElement('textarea');area.value=text;area.setAttribute('aria-label','Anfragetext zum Kopieren');form.append(area);area.focus();area.select();$('#form-status').textContent='Automatisches Kopieren ist nicht verfügbar. Der Text steht unten zum Markieren und Kopieren bereit.';}});
 $$('[data-dialog]').forEach(b=>b.addEventListener('click',()=>document.getElementById(b.dataset.dialog).showModal()));$$('dialog').forEach(d=>{$('.close-dialog',d).addEventListener('click',()=>d.close());d.addEventListener('click',e=>{if(e.target===d){const r=d.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)d.close();}});});
 $('#year').textContent=new Date().getFullYear();
+// Scroll choreography: transforms only, one scheduled frame per scroll.
+const stage=$('.hero-art'), floors=$$('.floor'), statement=$('.statement'), outline=$('.outline-word');
+let choreographyFrame=0;
+const clamp=(v,a,b)=>Math.min(b,Math.max(a,v));
+function choreograph(){
+ choreographyFrame=0;
+ if(paused||reduced.matches){floors.forEach(f=>{f.style.transform='';f.style.opacity='';});outline.style.transform='';statement.style.removeProperty('--depth');$$('.scroll-type').forEach(el=>el.style.transform='');return;}
+ const box=stage.getBoundingClientRect(),progress=clamp((innerHeight-box.top)/(innerHeight+box.height*.25),0,1);
+ floors.forEach((floor,i)=>{const assembled=clamp(progress*2.1-i*.13,0,1);floor.style.animation='none';floor.style.opacity=String(.12+assembled*.88);floor.style.transform=`translate(${(1-assembled)*(i%2?35:-35)}px,${(1-assembled)*-100}px)`;});
+ const r=statement.getBoundingClientRect(),p=clamp((innerHeight-r.top)/(innerHeight+r.height),0,1);
+ outline.style.transform=`translateX(${-p*110}px)`;
+ statement.style.setProperty('--depth',`${(p-.5)*65}px`);
+ $$('.scroll-type').forEach((el,i)=>{const rect=el.getBoundingClientRect(),p=clamp((innerHeight-rect.top)/(innerHeight+rect.height),0,1);el.style.transform=`translateX(${(p-.5)*(i%2?-70:70)}px)`;});
+}
+function queueChoreography(){if(!choreographyFrame)choreographyFrame=requestAnimationFrame(choreograph);}
+addEventListener('scroll',queueChoreography,{passive:true});addEventListener('resize',queueChoreography);motion.addEventListener('click',queueChoreography);reduced.addEventListener('change',queueChoreography);
+queueChoreography();
+// Subtle pointer depth on desktop, never captures touch scrolling.
+if(matchMedia('(hover:hover) and (pointer:fine)').matches){stage.addEventListener('pointermove',e=>{if(paused||reduced.matches)return;const r=stage.getBoundingClientRect();stage.style.setProperty('--lean-x',`${((e.clientX-r.left)/r.width-.5)*10}deg`);stage.style.setProperty('--lean-y',`${-((e.clientY-r.top)/r.height-.5)*8}deg`);});stage.addEventListener('pointerleave',()=>{stage.style.setProperty('--lean-x','0deg');stage.style.setProperty('--lean-y','0deg');});}

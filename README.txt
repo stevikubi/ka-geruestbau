@@ -27,7 +27,7 @@ Impressum und Datenschutzerklärung sind funktional eingebunden, rechtlich noch 
 Es fehlen: tatsächlicher Hostinganbieter, Serverlog-Konfiguration/Speicherdauer,
 E-Mail-Dienstleister/Drittlandbezug sowie der aktuelle Register- und Handwerksrollenstatus.
 Gegebenenfalls zugeteilte USt-ID/W-IdNr ergänzen. Keine Nummern erfinden.
-Aktuell: GmbH i. G.; keine bestätigte Handwerksrolleneintragung und keine Meisterbehauptung.
+Aktuell: GmbH; keine bestätigte Handwerksrolleneintragung und keine Meisterbehauptung.
 Annahme: Geschäftsleitung und Büro Rheinstr. 11, 14513 Teltow; Satzungssitz Berlin.
 Projektplaner ist keine Statik, technische Freigabe oder Preisberechnung.
 Die neue KA-Wortmarke ist ein Designentwurf. Bestehendes verbindliches Logo kann ersetzt werden.
@@ -44,3 +44,15 @@ Chromium: 320, 390, 768 und 1440 px ohne horizontalen Überlauf;
 Projektplaner, Datenübernahme, mobile Navigation, Ablauf-Tabs, Rechtsseiten,
 reduzierte Bewegung; keine JavaScript-Laufzeitfehler im Test.
 E-Mail-Versand erfolgt durch den Nutzer und wurde nicht ausgelöst.
+
+UPDATE ZUR LIVE-VORBEREITUNG
+Telefon und E-Mail jetzt auch im Footer anklickbar ergänzt.
+Noch benötigt: Name/Tarif des Webhostings und E-Mail-Anbieter, um direkten
+Formularversand und die konkreten Datenschutzhinweise fertigzustellen.
+Der bisherige Mailto-Versand bleibt bis dahin funktionsfähig.
+Der Nutzer erklärt, Petrit sei Meister. Vor öffentlicher Verwendung des
+Meistertitels Meisterbrief abgleichen; bisher bekannt ist die Ausnahmebewilligung.
+
+Update 08.10.2026: Pfeilzeichen auf allen Seiten entfernt. Markenauftritt oben ohne Rechtsform, korrekte Gesellschaftsbezeichnung weiterhin in Footer/Impressum. Bewegte Konstruktionslinien, Scanlinie, kräftigere Typografie und mobile Gerüstansicht ergänzt. Animationen pausierbar; reduzierte Bewegung wird berücksichtigt. Live-Deployment nicht erfolgt. IONOS MyWebsite Now Essential unterstützt keinen Upload dieser vollständigen statischen Website; tatsächlichen Live-Host prüfen.
+
+Scroll-Edition: Gerüstetagen werden scrollabhängig montiert, kinetische Schrift und räumliche Bewegung. Kein Scroll-Zwang, keine Übernahme der Scrollsteuerung.
